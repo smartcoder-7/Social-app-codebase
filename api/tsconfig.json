@@ -1,0 +1,26 @@
+{
+  "extends": "../shared/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "target": "ES2016",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "db/**/*.ts",
+    "knexfile.ts",
+    "knexfile.js",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

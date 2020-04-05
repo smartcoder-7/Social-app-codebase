@@ -1,0 +1,28 @@
+{
+  "name": "studium-mono",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "studium-api"
+  ],
+  "scripts": {
+    "generate": "yarn generate:api && yarn generate:web",
+    "dev": "concurrently --names API,MOBILE 'yarn generate:api --watch' 'yarn generate:mobile-app --watch'",
+    "generate:api": "graphql-code-generator -c codegen.api.yml",
+    "generate:mobile-app": "graphql-code-generator -c codegen.mobile-app.yml"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "^1.12.2",
+    "@graphql-codegen/cli": "^1.12.2",
+    "@graphql-codegen/typescript": "^1.12.2",
+    "@graphql-codegen/typescript-operations": "^1.12.2",
+    "@graphql-codegen/typescript-react-apollo": "^1.12.2",
+    "@graphql-codegen/typescript-resolvers": "^1.12.2",
+    "@playlyfe/gql": "^2.6.2",
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "graphql": "^14.6.0"
+  }
+}

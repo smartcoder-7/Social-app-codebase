@@ -1,0 +1,15 @@
+{
+  schema: {
+    files: [
+      "studium-api/src/gqlTypes/**/*.graphql",
+    ]
+  },
+  query: {
+    files: [
+      {
+        match: { include: 'studium-mobile-app/src/**/*.tsx', exclude: '*.test.ts' },
+        parser: ['EmbeddedQueryParser', { startTag: 'gql`', endTag: '`' }]
+      }
+    ]
+  }
+}
