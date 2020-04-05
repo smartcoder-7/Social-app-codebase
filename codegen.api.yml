@@ -1,0 +1,16 @@
+schema: studium-api/src/gqlTypes/**/*.graphql
+overwrite: true
+generates:
+  ./studium-api/src/types/gqlTypings.generated.ts:
+    plugins:
+      - add: "/* THIS IS A GENERATED FILE - DO NOT MODIFY */"
+      - add: "/* eslint-disable */"
+      - add: "import { ApolloContext } from './types';"
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+    config:
+      contextType: ApolloContext
+      maybeValue: T | undefined
+      mappers:
+        User: ../models/UserModel#UserModel

@@ -1,0 +1,15 @@
+schema: studium-api/src/gqlTypes/**/*.graphql
+documents:
+  - studium-mobile-app/src/**/*.tsx
+  - studium-mobile-app/src/**/*.ts
+overwrite: true
+generates:
+  ./studium-mobile-app/src/types/gqlReactTypings.generated.d.tsx:
+    plugins:
+      - add: "/* THIS IS A GENERATED FILE - DO NOT MODIFY */"
+      - add: "/* eslint-disable */"
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true 
