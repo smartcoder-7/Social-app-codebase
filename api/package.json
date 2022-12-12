@@ -28,7 +28,7 @@
     "cross-env": "^7.0.0",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql-iso-date": "^3.6.1",
     "graphql-middleware": "^4.0.2",
     "graphql-shield": "^7.0.13",
