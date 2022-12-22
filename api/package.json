@@ -34,7 +34,7 @@
     "graphql-shield": "^7.0.13",
     "graphql-tools": "^4.0.7",
     "graphql-type-json": "^0.3.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.20.9",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
